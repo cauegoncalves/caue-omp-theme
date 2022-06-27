@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "final_space": true,
+  "final_space": false,
   "console_title": true,
   "console_title_style": "template",
   "console_title_template": "{{ .Shell }} in {{ .Folder }}",
@@ -11,13 +11,14 @@
       "segments": [
         {
           "type": "os",
-          "style": "powerline",
-          "powerline_symbol": "\uE0B0",
+          "style": "diamond",
+          "leading_diamond": "\uE0B6",
+          "trailing_diamond": "",
           "foreground": "#fff",
           "background": "#003543",
           "properties": {
-            "windows": "\uE62A",
-            "postfix": ""
+            "postfix": "",
+            "prefix": ""
           }
         },
         {
@@ -80,30 +81,15 @@
       "alignment": "right",
       "segments": [
         {
-          "type": "battery",
-          "style": "powerline",
-          "invert_powerline": true,
-          "powerline_symbol": "\uE0B2",
+          "type": "kubectl",
+          "style": "diamond",
+          "leading_diamond": "\uE0B6",
+          "trailing_diamond": "\uE0B4",
           "foreground": "#242424",
-          "background": "#f36943",
-          "background_templates": [
-            "{{if eq \"Charging\" .State.String}}#33DD2D{{end}}",
-            "{{if eq \"Discharging\" .State.String}}#FFCD58{{end}}",
-            "{{if eq \"Full\" .State.String}}#0476d0{{end}}"
-          ],
+          "background": "#0476d0",
           "properties": {
-            "postfix": "\uF295 \uf583 "
-          }
-        },
-        {
-          "type": "time",
-          "style": "powerline",
-          "invert_powerline": true,
-          "powerline_symbol": "\uE0B2",
-          "foreground": "#fff",
-          "background": "#003543",
-          "properties": {
-            "prefix": "<#fff> \uf64f </>"
+            "prefix": "<#fff>\uFD31 </>",
+            "parse_kubeconfig": true
           }
         }
       ]
@@ -124,10 +110,10 @@
         {
           "type": "text",
           "style": "plain",
-          "foreground": "#f1184c",
+          "foreground": "#fff",
           "properties": {
             "prefix": "",
-            "text": "🚀"
+            "text": "\u276F"
           }
         }
       ]
