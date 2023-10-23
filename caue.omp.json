@@ -80,7 +80,7 @@
           "background": "#0476d0",
           "leading_diamond": "\ue0b6",
           "trailing_diamond": "\ue0b4",
-          "template": "<#fff>\ufd31 </>{{ .Context }}{{ if .Namespace }} :: {{ .Namespace }}{{ end }} ",
+          "template": "<#fff>󱃾 </>{{ .Context }}{{ if .Namespace }} :: {{ .Namespace }}{{ end }} ",
           "properties": {
             "parse_kubeconfig": true
           }
